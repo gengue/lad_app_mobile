@@ -1,0 +1,13 @@
+<ion-view view-title="Proyectos">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-thumbnail-left item-icon-right" ng-repeat="proyecto in proyectos" type="item-text-wrap" href="#/tab/proyectos/{{proyecto.id}}">
+        <img ng-src="http://localhost:8000/{{proyecto.image}}">
+        <h2>{{proyecto.title}}</h2>
+        <p>{{proyecto.description}}</p>
+        <p>Direccion: <strong>{{proyecto.direction}}</strong></p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
