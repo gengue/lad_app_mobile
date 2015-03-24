@@ -3,18 +3,19 @@
        <div align="center">
           <h2>{{proyecto.title}}</h2>
           <p>
-          <i class="ion-film-marker"></i> {{proyecto.direction}}   
+          <i class="ion-film-marker"></i> {{proyecto.direction}}
           </p>
        </div>
-    <img ng-src="http://localhost:8000/{{proyecto.image}}" style="width: 100%; height: auto">
+    <a href="#/tab/proyectos/{{proyecto.id}}/images" title=""><img ng-src="http://localhost:8000/{{proyecto.image}}" style="width: 100%; height: auto"></a>
     <h6><i class="ion-arrow-graph-up-right"></i> Estado: <strong> {{proyecto.state}} </strong> |
-        <i class="ion-ios-clock-outline"></i> Duracion:<strong> {{proyecto.length}}  </strong> |
-        <i class="ion-information-circled"></i> Formato:<strong> {{proyecto.format}}  </strong> 
+        <i class="ion-ios-clock-outline"></i> Duracion:<strong> {{proyecto.length}} </strong> |
+        <i class="ion-information-circled"></i> Formato:<strong> {{proyecto.format}} </strong> |
+        <i class="icon ion-videocamera"></i> Trailer: <strong><a href="{{proyecto.link}}">{{proyecto.link}}</a></strong>
     </h6>
     <hr>
     <div align="center">
-        <h4>Sipnosis</h4>
-        <p class="padding">
+        <h4>Sinopsis</h4>
+        <p class="padding" align="justify">
           {{proyecto.synopsis}}
         </p>
     </div>

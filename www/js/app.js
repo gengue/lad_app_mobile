@@ -36,9 +36,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     templateUrl: "templates/tabs.html"
   })
 
-  // Each tab has its own nav history stack:
-
-  .state('tab.quienes_somos', {
+    .state('tab.quienes_somos', {
     url: '/quienes_somos',
     views: {
       'tab-quienes-somos': {
@@ -47,8 +45,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-
-  .state('tab.proyectos', {
+    .state('tab.mision', {
+    url: '/quienes_somos/mision',
+    views: {
+      'tab-quienes-somos': {
+        templateUrl: 'templates/tab-mision.html',
+        controller: 'MisionCtrl'
+      }
+    }
+  })
+    .state('tab.vision', {
+    url: '/quienes_somos/vision',
+    views: {
+      'tab-quienes-somos': {
+        templateUrl: 'templates/tab-vision.html',
+        controller: 'VisionCtrl'
+      }
+    }
+  })
+    .state('tab.proyectos', {
       url: '/proyectos',
       views: {
         'tab-proyectos': {
@@ -57,18 +72,28 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
-    .state('tab.proyectos-detalle', {
-      url: '/proyectos/:proyectoId',
-      views: {
-        'tab-proyectos': {
-          templateUrl: 'templates/proyecto-detalle.html',
-          controller: 'ProyectoDetalleCtrl'
-        }
-      }
-    })
 
-  .state('tab.mapa', {
-    url: '/mapa',
+    .state('tab.proyectos-detalle', {
+    url: '/proyectos/:proyectoId',
+    views: {
+      'tab-proyectos': {
+        templateUrl: 'templates/proyecto-detalle.html',
+        controller: 'ProyectoDetalleCtrl'
+      }
+    }
+  })
+    .state('tab.slide', {
+    url: '/proyectos/:proyectoId/images',
+    views: {
+      'tab-proyectos': {
+        templateUrl: 'templates/tab-slide.html',
+        controller: 'SlideCtrl'
+      }
+    }
+  })
+
+    .state('tab.mapa', {
+    url: '/inicio',
     views: {
       'tab-mapa': {
         templateUrl: 'templates/tab-mapa.html',
@@ -76,7 +101,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-  .state('tab.compartir', {
+    .state('tab.compartir', {
      url: '/compartir',
      views: {
        'tab-compartir': {
@@ -87,6 +112,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/quienes_somos');
+  $urlRouterProvider.otherwise('/tab/inicio');
 
 });

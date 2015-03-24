@@ -10,4 +10,17 @@ angular.module('starter.services', [])
       $http.get('http://localhost:8000/api/projects/'+id).success(callback);
     }
   };
+})
+
+.factory('Images', function($http){
+    return{
+
+        getImages: function(id, callback){
+            $http.get('http://localhost:8000/api/projects/'+id+'/images').success(callback);
+        },
+
+        getProject: function(id, callback) {
+          $http.get('http://localhost:8000/api/projects/'+id).success(callback);
+        }
+    };
 });

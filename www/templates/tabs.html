@@ -5,20 +5,27 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-positive">
 
+  <!-- Home -->
+  <ion-tab title="Inicio" icon-off="ion-home" icon-on="ion-home" href="#/tab/inicio">
+    <ion-nav-view name="tab-mapa"></ion-nav-view>
+  </ion-tab> 
+
+   <!-- Estamos aqui Tab -->
+  <!-- <ion-tab title="Inicio" icon-off="ion-ios-location-outline" icon-on="ion-ios-location" href="#/tab/mapa">
+    <ion-nav-view name="tab-mapa"></ion-nav-view>
+  </ion-tab> --> 
+
   <!-- Quienes somos Tab -->
-  <ion-tab title="¿Quienes somos?" icon-off="ion-home" icon-on="ion-home" href="#/tab/quienes_somos">
+  <ion-tab title="¿Quienes somos?" icon-off="ion-university" icon-on="ion-university" href="#/tab/quienes_somos">
     <ion-nav-view name="tab-quienes-somos"></ion-nav-view>
   </ion-tab>
 
   <!-- Proyectos Tab -->
-  <ion-tab title="¿Que hacemos?" icon-off="ion-flag" icon-on="ion-flag" href="#/tab/proyectos">
+  <ion-tab title="¿Qué hacemos?" icon-off="ion-flag" icon-on="ion-flag" href="#/tab/proyectos">
     <ion-nav-view name="tab-proyectos"></ion-nav-view>
   </ion-tab>
 
-  <!-- Estamos aqui Tab -->
-  <ion-tab title="¿Donde estamos?" icon-off="ion-ios-location-outline" icon-on="ion-ios-location" href="#/tab/mapa">
-    <ion-nav-view name="tab-mapa"></ion-nav-view>
-  </ion-tab>
+ 
 
   <!-- Compartir Tab -->
   <ion-tab title="Compartir" icon-off="ion-share" icon-on="ion-share" href="#/tab/compartir">

@@ -1,0 +1,77 @@
+<ion-view view-title="Imágenes">
+    <ion-content>
+
+        <div class="list card">
+
+          <div class="item ">
+            <!-- <img src="avatar.jpg"> -->
+            <h2 align="center">GALERÍA</h2>
+          </div>
+
+          <div class="item item-body">
+                <div align="center">
+                      <h2>{{proyecto.title}}</h2>
+                      <p>
+                      <i class="ion-film-marker"></i> {{proyecto.direction}}
+                      </p>
+               </div>
+               <h6><i class="ion-arrow-graph-up-right"></i> Estado: <strong> {{proyecto.state}} </strong> |
+                    <i class="ion-ios-clock-outline"></i> Duracion:<strong> {{proyecto.length}} </strong> |
+                    <i class="ion-information-circled"></i> Formato:<strong> {{proyecto.format}} </strong> |
+                    <i class="icon ion-videocamera"></i> Trailer: <strong><a href="{{proyecto.link}}">{{proyecto.link}}</a></strong>
+                </h6>
+          </div>
+
+          <div class="item item-image">
+            
+            <!-- AQUÍ VA EL SLIDE -->
+
+             <ion-slide-box does-continue="true"
+                auto-play="true"
+                slide-interval="{{interval}}"
+                show-pager="true"
+                pager-click="changeSlide(index)"
+                on-slide-changed="slideHasChanged(index)">
+                <ion-slide>
+                    <div class="padding">
+                        <img ng-src="http://localhost:8000/{{imagenes[0]}}" style="width: 100%; height: auto">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="padding">
+                        <img ng-src="http://localhost:8000/{{imagenes[1]}}" style="width: 100%; height: auto">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="padding">
+                        <img ng-src="http://localhost:8000/{{imagenes[2]}}" style="width: 100%; height: auto">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="padding">
+                        <img ng-src="http://localhost:8000/{{imagenes[3]}}" style="width: 100%; height: auto">
+                    </div>
+                </ion-slide>
+            </ion-slide-box> 
+
+            <!-- <ion-slide-box does-continue="true"
+                auto-play="true"
+                slide-interval="{{interval}}"
+                show-pager="true"
+                pager-click="changeSlide(index)"
+                on-slide-changed="slideHasChanged(index)">
+                <ion-slide ng-repeat="imagen in imagenes">
+                    <h6>{{imagen}}</h6>
+                    <div class="padding">
+                        <img ng-src="http://localhost:8000/{{imagen}}" style="width: 100%; height: auto">
+                    </div>
+                </ion-slide>
+            </ion-slide-box> -->
+
+          </div>
+          
+
+        </div>
+        
+    </ion-content>
+</ion-view>
