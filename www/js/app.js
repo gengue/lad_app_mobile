@@ -63,6 +63,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
+
+    .state('tab.lad', {
+      url: '/quienes_somos/lad',
+      views: {
+        'tab-quienes-somos': {
+          templateUrl: 'templates/tab-lad.html',
+          controller: 'LadCtrl'
+        }
+      }
+    })
+
     .state('tab.proyectos', {
       url: '/proyectos',
       views: {

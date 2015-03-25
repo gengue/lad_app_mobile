@@ -1,0 +1,80 @@
+<ion-view view-title="Imágenes">
+    <ion-content>
+
+        <div class="list card">
+
+          <div class="item ">
+            <!-- <img src="avatar.jpg"> -->
+            <h2 align="center">GALERÍA</h2>
+          </div>
+
+          
+
+          <div class="item item-image">
+            
+            <!-- AQUÍ VA EL SLIDE -->
+
+             <ion-slide-box does-continue="true"
+                auto-play="true"
+                slide-interval="{{interval}}"
+                show-pager="true"
+                pager-click="changeSlide(index)"
+                on-slide-changed="slideHasChanged(index)">
+
+                <ion-slide>
+
+                    <div class="item item-body">
+                      <div align="center">
+                            <h2>Interior del Claustro San Juan de Nepomuceno</h2>
+                     </div>
+                    </div>
+                    <div class="padding">
+                        <img src="img/galeria/1.jpg" style="width: 100%; height: auto">
+                    </div>
+                </ion-slide>
+
+                <ion-slide>
+                    <div class="item item-body">
+                      <div align="center">
+                            <h2>Presentación de Proyecto</h2>
+                     </div>
+                    </div>
+                    <div class="padding">
+                        <img src="img/galeria/2.jpg" style="width: 100%; height: auto">
+                    </div>
+                </ion-slide>
+
+
+                <ion-slide>
+                    <div class="item item-body">
+                      <div align="center">
+                            <h2>Desarrollador artístico en el laboratorio</h2>
+                     </div>
+                    </div>
+                    <div class="padding">
+                        <img src="img/galeria/3.jpg" style="width: 100%; height: auto">
+                    </div>
+                </ion-slide>
+
+
+                <ion-slide>
+                    <div class="item item-body">
+                      <div align="center">
+                            <h2>Grabación de sonidos para proyectos audiovisuales</h2>
+                     </div>
+                    </div>
+                    <div class="padding">
+                        <img src="img/galeria/4.jpg" style="width: 100%; height: auto">
+                    </div>
+                </ion-slide>
+
+
+            </ion-slide-box> 
+
+          </div>
+          
+
+        </div>
+        
+    </ion-content>
+</ion-view>
