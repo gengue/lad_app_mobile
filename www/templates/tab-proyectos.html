@@ -1,7 +1,7 @@
-<ion-view view-title="Proyectos">
+<ion-view view-title="¿Qué hacemos?">
   <ion-content>
     <ion-list>
-      <ion-item class="item-thumbnail-left item-icon-right" ng-repeat="proyecto in proyectos" type="item-text-wrap" href="#/tab/proyectos/{{proyecto.id}}">
+      <ion-item class="item-thumbnail-left item-icon-right card" ng-repeat="proyecto in proyectos" type="item-text-wrap" href="#/tab/proyectos/{{proyecto.id}}">
         <img ng-src="http://192.168.1.37:1334/{{proyecto.image}}">
         <h2>{{proyecto.title}}</h2>
         <p>{{proyecto.description}}</p>
