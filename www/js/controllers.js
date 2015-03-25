@@ -62,7 +62,7 @@ $scope.interval = 2000;
 .controller('MapaCtrl', function($scope){
     $scope.map = { 
           center: { latitude: 11.243780253929911, longitude: -74.21373098171046 }, 
-          zoom: 19, 
+          zoom: 20, 
           options: { 
                       draggable: false,
                       scrollwheel: false,

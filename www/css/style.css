@@ -1,3 +1,8 @@
 .angular-google-map-container {
     height: 430px;
 }
+
+#map-window{
+	width: 150px;
+	height: 105px;
+}
